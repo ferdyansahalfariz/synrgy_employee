@@ -1,6 +1,5 @@
 package com.aplikasi.karyawan.entity.oauth;
 
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.core.GrantedAuthority;
 
@@ -26,7 +25,7 @@ public class Role implements GrantedAuthority {
     private String name;
 
     private String type;
-
+    @JsonIgnore
     @OneToMany(mappedBy = "role", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<RolePath> rolePaths;
 
@@ -80,3 +79,5 @@ public class Role implements GrantedAuthority {
         this.users = users;
     }
 }
+
+
