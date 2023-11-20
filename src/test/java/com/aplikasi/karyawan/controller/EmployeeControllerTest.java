@@ -53,7 +53,7 @@ class EmployeeControllerTest {
     @Test
     void listQuizHeader() throws Exception {
         mockMvc.perform(
-                get("/api/v1/employee/list")
+                get("/v1/employee/list?page=0&size=10")
                         .accept(MediaType.APPLICATION_JSON)
         ).andExpect(
                 status().isOk()
