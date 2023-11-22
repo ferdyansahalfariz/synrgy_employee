@@ -30,8 +30,7 @@ public class Config {
         return strDate;
     }
 
-    public boolean isValidEmail(String email)
-    {
+    public boolean isValidEmail(String email) {
         String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
                 "[a-zA-Z0-9_+&*-]+)*@" +
                 "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
